@@ -1,0 +1,102 @@
+.ourwork-inner{
+    .text-box{
+        p{
+            margin-bottom: 30px;
+        }
+        h6{
+            line-height: 1.5;
+        }
+    }
+    .womanfirst-box{
+    
+        h3{
+            text-align: center;
+            color: #DC9FC7;
+        }
+    }
+
+    .ourmodel-box{
+        .sub-title{
+            text-align: center;
+            color: $primary-color;
+            border: none;
+            span{
+                display: block;
+                font-size: 1.5rem;
+            }
+
+            p{
+                display: inline-block;
+                border-radius: 5px;
+                padding:5px 1.2rem;
+                font-size: 1.2rem;
+                color: $white;
+                background-color: $primary-color;
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    .ourwork-tab{
+        padding: 50px 0;
+        
+        .ourwork-box{
+            margin-bottom:50px;
+
+            .title-box{
+                margin-bottom: 30px;
+            }
+            .title-box + p,  .title-box +h4+p{
+                margin-top: 10px;
+                margin-bottom:50px;
+            }
+            .row{
+                justify-content: space-between;
+            }
+          
+            .row >div{
+                @include Dflex;
+                margin-bottom: 50px;
+                margin-right: auto;
+                .img-box img{
+                    max-width: 100px;
+                    margin: 0 auto;
+                }
+                .text-box{
+                    flex: 1;
+                    margin-left: 12px;
+                }
+            }
+        }
+    }
+
+    @include media-breakpoint-up(lg){
+        .womanfirst-box{ 
+            h3{
+                font-size: 3.5rem;
+            }
+        }
+    }
+
+    @include media-breakpoint-down(md){
+        .text-box:nth-child(5){
+            margin: 0;
+        }
+        .womanfirst-box{ 
+            h3{
+                font-size: 2.8rem;
+                margin-bottom: 30px;
+            }
+        }
+        .ourmodel-box .text-box{
+            margin-bottom: 30px;
+        }
+        .ourwork-box{
+            .col-md-6 > div{
+                width: 100%;
+            }
+        }
+      
+    }
+   
+}

@@ -1,0 +1,125 @@
+// 群眾募資列表+內頁
+
+.fundraising-inner {
+
+    .item-group {
+        margin-top: 30px;
+        // justify-content: space-between;
+
+        .text-box {
+            padding: 15px;
+            background-color: $light-3-gray;
+        }
+
+        h5 {
+            margin-top: 10px;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            @extend %text-ellipsis;
+            -webkit-line-clamp: 6;
+
+
+        }
+
+        ._amount {
+            justify-content: space-between;
+
+            ._present {
+                color: $primary-color;
+            }
+
+            ._percent {
+                color: $main-gray;
+            }
+        }
+
+        .page-btn-wrap {
+            margin-top: 20px;
+            margin-bottom: 0;
+            text-align: left;
+
+        
+            .small-btn {
+                padding: .3rem 1.2rem;
+            }
+        }
+
+    }
+
+
+    .plan-option {
+
+        ._price {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+
+        }
+    }
+    
+    // 群眾募資內頁
+    .plan-content {
+
+        .plan-nav {
+            margin-bottom: 20px;
+
+            .nav-link {
+                padding: 0.5rem 1.5rem;
+            }
+        }
+
+        .faq {
+            li {
+                margin-bottom: 20px;
+            }
+
+            h5 {
+                color: $primary-color;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    .plan-checkout .list-box:hover{
+         transform: none;
+    }
+
+
+    @include media-breakpoint-up(lg) {
+        .main-item {
+            margin: 50px 0;
+
+            .text-box {
+                color: $main-gray;
+
+                h5 {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+
+        .plan-content, .plan-checkout {
+            justify-content: space-between;
+        }
+
+
+    }
+
+
+    @include media-breakpoint-down(sm) {
+
+        .list-box {
+            margin-bottom: 20px;
+        }
+        .plan-option {
+            order: 1;
+        }
+
+        .plan-box, .plan-checkout {
+            order: 2;
+        }
+    }
+}
+

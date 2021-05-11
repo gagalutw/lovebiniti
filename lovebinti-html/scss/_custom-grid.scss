@@ -1,0 +1,45 @@
+.section {
+    position: relative;
+    margin-bottom: 20px;
+
+    .main-title,
+    .sub-title {
+        font-size: 1.2rem;
+      
+    }
+
+    sub-title{
+        padding-right: 15px;
+        padding-bottom: 0px;
+    }
+
+    .img-wrap span {
+        color: $main-gray;
+        font-size: .9rem;
+    }
+
+    p {
+        margin: 5px auto 10px;
+
+        span {
+            color: $red;
+        }
+    }
+
+    .margin-gap {
+        margin: 80px auto;
+        // border: 1px solid salmon;
+
+        @include media-breakpoint-down(lg) {
+            margin: 50px auto;
+        }
+
+        @include media-breakpoint-down(md) {
+            margin: 30px auto;
+        }
+
+        &.text-gap {
+            margin-top: 20px;
+        }
+    }
+}

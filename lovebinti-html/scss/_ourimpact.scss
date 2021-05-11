@@ -1,0 +1,296 @@
+.ourimpact-inner {
+    .item-group {
+        margin-top: 50px;
+
+        h4 {
+            margin-bottom: 10px;
+        }
+    }
+
+    .planmaps-item-group {
+        .text-box {
+            background: $lighten-gray;
+            position: relative;
+
+            .phase-box {
+                text-align: right;
+
+                p {
+                    padding: .8rem 1.1rem;
+                    background: $light-purple;
+                    color: $white;
+                    display: inline-block;
+                }
+            }
+           
+
+            @include media-breakpoint-up(lg) {
+                height: 350px;
+                .box {
+                    padding: 30px;
+                }
+            }
+
+            @include media-breakpoint-up(xl) {
+                height: 300px;
+            }
+
+            @include media-breakpoint-down(md) {
+                .box {
+                    padding: 20px 15px;
+                }
+            }
+        }
+    }
+
+    .planmaps-row-group {
+        .row {
+            margin: 0;
+            justify-content: space-around;
+
+            & :nth-child(1).box-wrap ._info {
+                color: #77BA5B;
+            }
+
+            & :nth-child(2).box-wrap ._info {
+                color: #22BCAD;
+            }
+
+            & :nth-child(3).box-wrap ._info {
+                color: #5172BC;
+            }
+
+            & :nth-child(4).box-wrap ._info {
+                color: #836CC1;
+            }
+
+            & :nth-child(5).box-wrap ._info {
+                color: #DD54A9;
+            }
+
+            & :nth-child(6).box-wrap ._info {
+                color: #F93866;
+            }
+
+            & :nth-child(7).box-wrap ._info {
+                color: #F46A25;
+            }
+
+            & :nth-child(8).box-wrap ._info {
+                color: #FFC82C;
+            }
+
+        }
+
+        .box-wrap {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin: 20px 2px;
+
+            @include transition-cubic;
+
+            .td-box {
+                text-align: center;
+                background: $white;
+
+                &._vertical {
+                    padding: 15px 5px;
+                    font-size: .8rem;
+                    flex: 1;
+                }
+            }
+
+            ._year {
+                padding: 0 10px;
+            }
+
+            ._info {
+                font-size: .8rem;
+            }
+
+            ._showlg {
+                line-height: 1.1;
+            }
+
+            h5 {
+                margin-top: 10px;
+            }
+        }
+
+        @include media-breakpoint-up(sm) {
+            .row {
+
+                & :nth-child(1).box-wrap ._info {
+                    border-color: #77BA5B;
+                }
+
+                & :nth-child(2).box-wrap ._info {
+                    border-color: #22BCAD;
+                }
+
+                & :nth-child(3).box-wrap ._info {
+                    border-color: #5172BC;
+                }
+
+                & :nth-child(4).box-wrap ._info {
+                    border-color: #836CC1;
+                }
+
+                & :nth-child(5).box-wrap ._info {
+                    border-color: #DD54A9;
+                }
+
+                & :nth-child(6).box-wrap ._info {
+                    border-color: #F93866;
+                }
+
+                & :nth-child(7).box-wrap ._info {
+                    border-color: #F46A25;
+                }
+
+                & :nth-child(8).box-wrap ._info {
+                    border-color: #FFC82C;
+                }
+            }
+
+            .box-wrap {
+                max-width: 48%;
+                flex: 0 0 48%;
+
+                ._info {
+                    border-top-width: 5px;
+                    border-top-style: solid;
+                    height: 28px;
+
+                }
+
+                ._year {
+                    border: 1px solid $light-gray;
+                    font-size: .8rem;
+                }
+
+                .td-box._vertical {
+                    background-color: $lighten-gray;
+                }
+            }
+
+        }
+
+        @include media-breakpoint-up(md) {
+            .box-wrap {
+                max-width: 24%;
+                flex: 0 0 24%;
+            }
+        }
+
+        @include media-breakpoint-up(lg) {
+            ._hidelg {
+                display: inline;
+            }
+        }
+        @include media-breakpoint-up(xl) {
+            .box-wrap {
+                max-width: 12%;
+                flex: 0 0 12%;
+            }
+
+            ._hidelg {
+                display: none;
+            }
+        }
+
+        @include media-breakpoint-down(xs) {
+
+            .row {
+
+                & :nth-child(1).box-wrap ._year {
+                    background: #77BA5B;
+                }
+
+                & :nth-child(2).box-wrap ._year {
+                    background: #22BCAD;
+                }
+
+                & :nth-child(3).box-wrap ._year {
+                    background: #5172BC;
+                }
+
+                & :nth-child(4).box-wrap ._year {
+                    background: #836CC1;
+                }
+
+                & :nth-child(5).box-wrap ._year {
+                    background: #DD54A9;
+                }
+
+                & :nth-child(6).box-wrap ._year {
+                    background: #F93866;
+                }
+
+                & :nth-child(7).box-wrap ._year {
+                    background: #F46A25;
+                }
+
+                & :nth-child(8).box-wrap ._year {
+                    background: #FFC82C;
+                }
+
+
+            }
+
+            .box-wrap {
+                max-width: 100%;
+                flex: 100%;
+                margin: 0;
+            }
+
+            .td-box {
+                &._vertical {
+                    background-color: $white;
+                    border-top: 3px solid $lighten-gray;
+                }
+
+                ._year {
+                    color: $white;
+                    font-size: 1.3rem;
+                    border: none;
+                    display: block;
+                }
+            }
+
+            ._info {
+                padding-bottom: 10px;
+            }
+            ._showlg {
+                display: none;
+            }
+        }
+
+
+        @include media-breakpoint-between(lg, lg) {
+            ._hidelg {
+                display: inline;
+            }
+
+            ._showlg {
+                display: none;
+            }
+        }
+        @include media-breakpoint-between(md, md) {
+            ._hidelg {
+                display: none;
+            }
+        }
+        @include media-breakpoint-between(sm, sm) {
+            ._hidelg {
+                display: inline;
+            }
+
+            ._showlg {
+                display: none;
+            }
+        }       
+    }
+
+}

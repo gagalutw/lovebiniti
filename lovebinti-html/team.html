@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- <html lang="zh-Hant-TW"> -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+
+    <!-- IE -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    <title>愛女孩</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
+    <link rel="stylesheet" href="dist/slick/slick.css">
+    <link rel="stylesheet" href="dist/slick/slick-theme.css">
+    <link rel="stylesheet" href="dist/fancybox3/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="dist/jquery-ui-1.12.1/jquery-ui.min.css">
+    <script data-search-pseudo-elements defer src="dist/fontawesome-5.5.0/js/all.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="css/style.min.css?v=20210101">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- NAV START -->
+        <header id="Nav">
+            <div class="navbar container">
+                <!-- 手機版nav漢堡 -->
+                <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </button>
+
+                <!-- 手機版購物車按鈕 -->
+                <div class="mob-display"><button class="mob-cart-btn" type="button" aria-expanded="false"><img
+                            src="images/cart.svg" alt="cart"></button></div>
+
+                <div class="logo-box col-lg-3">
+                    <a href="index.html"><img src="images/logo.png" alt="lovebinti"></a>
+                </div>
+
+                <div class="menubar col-lg-9">
+                    <!-- 手機版nav關閉按鈕 -->
+                    <button class="menu-toggle toggle-close-btn" type="button" aria-hidden="true"><span
+                            class="line"></span>
+                        <span class="line"></span></button>
+                    <!-- 上選單 -->
+                    <nav class="sub-menu">
+                        <div class="nav">
+                            <a class="nav-item nav-link" href="news.html">最新消息<img src="images/news.svg" alt="news"></a>
+
+                            <a class="nav-item nav-link" href="story.html">部落格<img src="images/blog.svg" alt="blog"></a>
+
+                            <a class="nav-item nav-link" href="products.html">購物<img src="images/shop.svg"
+                                    alt="shopping"></a>
+
+                            <div class="btn-group">
+                                <a class="nav-item nav-link" href="members.html" data-mob="會員專區"><img
+                                        src="images/member.svg" alt="member"></a>
+                                <div class="web-display"><a class="nav-item nav-link cart-btn" href="javascript:void(0)"
+                                        data-mob="購物車"><img src="images/cart.svg" alt="cart"></a></div>
+
+
+                                <!-- 先隱藏 -->
+                                <!-- <a class="nav-item nav-link lan-link" href="javascript:void(0)">EN</a> -->
+                            </div>
+                        </div>
+                    </nav>
+                    <!-- 主選單 -->
+                    <nav class="main-menu">
+                        <ul class="nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="fundraising.html">群眾募資</a>
+                            </li>
+                            <!-- 先隱藏 -->
+                            <!-- <li class="nav-item">
+                                      <a class="nav-link" href="donate.html">捐款</a>
+                                  </li> -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">我們在做什麼</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="womenfirst.html">婦女第一</a>
+                                    <a class="dropdown-item" href="ourmodel.html">三個支柱</a>
+                                    <a class="dropdown-item" href="ourwork.html">我們的工作</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">我們的影響力</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="plan_maps.html">執行地圖</a>
+                                    <a class="dropdown-item" href="methodology.html">研究方法與國家</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown active">
+                                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">關於我們</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="mission.html">使命與願景</a>
+                                    <a class="dropdown-item" href="reports.html">公開揭露事項</a>
+                                    <a class="dropdown-item" href="location.html">辦公室</a>
+                                    <a class="dropdown-item active" href="team.html">執行團隊</a>
+                                </div>
+                            </li>
+                            <!-- 先隱藏 -->
+                            <!-- <li class="nav-item mob-dispaly">
+                                      <a class="nav-link lan-link" href="javascript:void(0)">EN</a>
+                                  </li> -->
+                        </ul>
+                    </nav>
+                </div>
+                <button class="close-element" type="button" aria-hidden="false"></button>
+            </div>
+        </header>
+        <!-- NAV END -->
+        <!-- 購物車展開 -->
+        <div class="cart-box">
+            <button class="menu-toggle toggle-close-btn" type="button" aria-hidden="true"><span class="line"></span>
+                <span class="line"></span></button>
+            <p class="box-title">最近加入的商品</p>
+            <!-- 無商品 -->
+            <p class="text-center _warning">您還沒選擇任何商品!</p>
+            <!-- 有商品 -->
+            <div class="row-list">
+                <div class="row-box">
+                    <a href="javascript:void(0)">
+                        <div class="img-box"><img src="images/instagram.png" alt=""></div>
+                        <p class="text-box col-4">愛女孩烏⼲達黑蜜</p>
+                        <p class="_amount">1</p>
+                        <p class="_price">NT$1,200</p>
+                    </a>
+                </div>
+                <div class="row-box">
+                    <a href="javascript:void(0)">
+                        <div class="img-box"><img src="images/instagram.png" alt=""></div>
+                        <p class="text-box col-4">愛女孩烏⼲達黑蜜</p>
+                        <p class="_amount">1</p>
+                        <p class="_price">NT$1,200</p>
+                    </a>
+                </div>
+                <div class="page-btn-wrap">
+                    <a class="main-btn small-btn" href="product_cart.html">前往結帳</a>
+                </div>
+            </div>
+        </div>
+        <!-- 購物車展開 END-->
+        <!-- 內容開始 -->
+        <div class="content">
+            <!-- 麵包屑 START -->
+            <nav aria-label="breadcrumb" class="breadcrumb-wrap">
+                <div class="container">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">首頁</a></li>
+                        <li class="breadcrumb-item"><a href="javascript:void(0)">關於我們</a></li>
+                        <li class="breadcrumb-item active" aria-current="page"><a href="#">執行團隊</a></li>
+                    </ol>
+                </div>
+            </nav>
+            <!-- 麵包屑 END -->
+            <!-- 頁面大圖 -->
+            <div class="page-banner">
+                <div class="img-box">
+                    <div class="container">
+                        <h1>關於我們</h1>
+                    </div>
+                    <picture>
+                        <img src="images/BANNER_about.jpg" alt="">
+                    </picture>
+                </div>
+            </div>
+            <!-- 頁面大圖 END-->
+            <div class="container">
+                <div class="inner about-inner">
+                    <div class="title-box text-left">
+                        <h1 class="title">執行團隊</h1>
+                    </div>
+                    <div class=" team-item-group item-group row">
+                        <div class="list-box col-md-6">
+                            <div class="text-box">
+                                <h4 class="title sub-title">理監事暨執⾏團隊</h4>
+                                <ul>
+                                    <li class="_info">
+                                        <a href="https://www.facebook.com/photo/?fbid=1128740947169214&set=a.138759989500653"
+                                            target="_blank">劉兆雯 | 理事長 | 房角石社會企業負責人</a></li>
+                                    <li class="_info">
+                                        <a href="https://www.facebook.com/WangChiTsun/" target="_blank">王啟圳 | 副理事長 |
+                                            建築師</a></li>
+                                    <li class="_info">
+                                        <a href="https://www.facebook.com/profile.php?id=100003632622338"
+                                            target="_blank">胡哲生 | 常務理事 | 台灣社會企業創新創業學會理事長 | 輔仁大學 教授</a></li>
+                                    <li class="_info">
+                                        <a href="https://www.facebook.com/DucasWu" target="_blank">吳俊德 | 理事 |
+                                            職學國際負責人</a></li>
+                                    <li class="_info">
+                                        <a href="https://www.facebook.com/iamkelvin2" target="_blank">王彥清 | 理事 |
+                                            水資源與國際社群經營</a></li>
+                                    <li class="_info">
+                                        <a href="https://www.facebook.com/damei.hong" target="_blank">洪慧美 | 理事 |
+                                            上市公司專案經理</a></li>
+                                    <li class="_info">
+                                        <a href="https://www.facebook.com/rose.chao.14" target="_blank">趙心屏 | 理事 |
+                                            集團秘書</a></li>
+                                    <li class="_info">
+                                        <a href="https://www.facebook.com/profile.php?id=100001427931321"
+                                            target="_blank">盧秀芳 | 理事 | 媒體人</a></li>
+                                    <li class="_info">李潔 | 理事</li>
+                                    <li class="_info">
+                                        <a href="https://www.facebook.com/josephineLo1279" target="_blank">羅秀英 | 監事 |
+                                            Wash水資源計畫專案志工</a></li>
+                                    <li class="_info">
+                                        <a href="https://www.facebook.com/profile.php?id=100000317292656"
+                                            target="_blank">莊明勳 | 監事</a></li>
+                                    <li class="_info">
+                                        <a href="https://www.facebook.com/profile.php?id=1679826518" target="_blank">蕭文興
+                                            | 常務監事 | 行銷公司經理</a></li>
+                                    <li class="_info">
+                                        <a href="https://www.facebook.com/iris.chiu2" target="_blank">丘麗英 | 候補監事 |
+                                            教育顧問（台灣）</a></li>
+                                    <li class="_info">
+                                        <a href="https://www.facebook.com/anyu.chang.52" target="_blank">張安妤 | 愛女孩發起人 |
+                                            行銷專員 Coordinator</a></li>
+                                    <li class="_info">
+                                        <a href="https://www.facebook.com/eat120hsu" target="_blank">許裕昌 | 社企營運長</a>
+                                    </li>
+                                    <li class="_info">
+                                        <a href="https://www.facebook.com/seietw/photos/t.1764566246/1810915638932335/?type=3"
+                                            target="_blank">王福裕 | 永續聚落設計與營造 專家顧問</a>
+                                    </li>
+                                    <li class="_info">
+                                        <a href="https://www.facebook.com/Esther8926" target="_blank">張雁筑 | 企業顧問 |
+                                            社群經營顧問</a>
+                                    </li>
+                                    <li class="_info">
+                                        <a href="https://www.facebook.com/saluwolf" target="_blank">陳英詔 | 醫療顧問 | 醫師</a>
+                                    </li>
+                                    <li class="_info">
+                                        <a href="https://www.facebook.com/tina.huang.12764" target="_blank">黃亭茵 |
+                                            非洲發展型計畫顧問 | 聯合國糧食援助專案顧問</a>
+                                    </li>
+                                    <li class="_info">
+                                        <a href="https://www.facebook.com/Avita1008" target="_blank">盧俐靜 | 整合行銷顧問 |
+                                            資訊系統專案</a>
+                                    </li>
+                                    <li class="_info">
+                                        <a href="https://www.facebook.com/may.lai.1612" target="_blank">賴美媖 | 社群經營顧問 |
+                                            藝術公司總監</a>
+                                    </li>
+                                    <li class="_info">
+                                        <a href="https://www.facebook.com/fineline.jkm" target="_blank">曾克明 |
+                                            美術指導、產品設計</a>
+                                    </li>
+                                    <li class="_info">
+                                        <a href="https://www.facebook.com/Helena.YihanLien" target="_blank">連怡涵 |
+                                            經濟與社會永續發展 研究員</a>
+                                    </li>
+                                    <li class="_info">
+                                        <a href="https://www.facebook.com/monica.lai.12" target="_blank">賴淑媛 | 辦公室主任</a>
+                                    </li>
+                                    <li class="_info">
+                                        <a href="https://www.facebook.com/profile.php?id=1798613139" target="_blank">李承翰
+                                            | 永續聚落執行專員</a>
+                                    </li>
+                                    <li class="_info">吳威廷 | 律師 | 日熙法律事務所</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="list-box">
+                                <div class="text-box">
+                                    <h4 class="title sub-title">非洲</h4>
+                                    <ul>
+                                        <li class="_info">
+                                            <a href="https://www.facebook.com/elle.yang.90" target="_blank">Elle Yang | 創辦人
+                                                | 候補理事（台灣） | 東非事務負責人</a></li>
+                                        <li class="_info">
+                                            <a href="https://www.facebook.com/isaac.CY.Chao/" target="_blank">Isaac Chao |
+                                                非洲區域總監 | 候補理事（台灣） | 史瓦帝尼負責人</a></li>
+                                        <li class="_info">
+                                            <a href="https://www.facebook.com/michelle.hu.9803" target="_blank">Michelle Hu
+                                                | 史瓦帝尼、莫三鼻克農業顧問 | 史瓦帝尼董事會成員</a></li>
+                                        <li class="_info">
+                                            <a href="https://www.facebook.com/outstanding.Suzan.Okae" target="_blank">Suzan
+                                                Okae Abello | 烏干達婦女培力專案經理</a></li>
+                                        <li class="_info">
+                                            <a href="https://www.facebook.com/swalle.r.excel" target="_blank">Swalle Excel
+                                                Kafeero | 烏干達社企專案經理</a></li>
+                                        <li class="_info">
+                                            <a href="https://www.facebook.com/atis.evelyne" target="_blank">Evelyn Atis |
+                                                婦女培力項目 | 烏干達 裁縫顧問</a></li>
+                                        <li class="_info">
+                                            <a href="https://www.facebook.com/martin.ngollah" target="_blank">Martin Ochieng
+                                                Ng’ollah | 東非 農村培力經理 |牧師</a></li>
+                                        <li class="_info">
+                                            <a href="https://www.facebook.com/eddychou69" target="_blank">Eddy Chou |
+                                                僑務委員(東非) | 企業家顧問 </a></li>
+                                        <li class="_info">
+                                            <a href="https://www.facebook.com/cyrus.byamukama" target="_blank">Denis
+                                                Byamukama | 社區發展經理 | 烏干達食農課程</a></li>
+                                        <li class="_info">
+                                            <a href="https://www.facebook.com/justus.juma.353" target="_blank">Justus Juma |
+                                                農業技師 | 烏干達農場經營</a></li>
+                                        <li class="_info">Jeff Yao | 烏干達董事會成員 | 第24屆北美洲台灣商會 聯合總會總會長</li>
+                                        <li class="_info">
+                                            <a href="https://www.facebook.com/photo?fbid=3132460230122317&set=a.144734138894956"
+                                                target="_blank">Beatrice Gladys Geria | 烏干達董事會成員 | 烏干達國會首席事務官</a></li>
+                                        <li class="_info">
+                                            <a href="https://www.facebook.com/bernally" target="_blank">Berna Hillary |
+                                                Coordinator | 北烏干達 農村培力</a></li>
+                                        <li class="_info">
+                                            <a href="https://www.facebook.com/demon19961106" target="_blank">Asa Tsao |
+                                                Coordinator | 婦女自立專案協作（養菇計畫）</a>
+                                        </li>
+                                        <li class="_info">
+                                            <a href="https://www.facebook.com/amony.proscovia.52" target="_blank">Proscovia
+                                                Opiyo | Coordinator | 南蘇丹 婦女工作</a>
+                                        </li>
+                                        <li class="_info">
+                                            <a href="https://www.facebook.com/roger.sekubunga.9" target="_blank">Sekubunga
+                                                Roger | 東非養菇計畫顧問</a>
+                                        </li>
+                                        <li class="_info">
+                                            <a href="https://www.facebook.com/samkeliso.dlamini.7712"
+                                                target="_blank">Samkeliso Dlamini | 專案農業技師</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="list-box">
+                                <div class="text-box">
+                                    <h4 class="title sub-title">協作夥伴</h4>
+                                    <ul>
+                                        <li class="_info">台灣玩具圖書館協會</li>
+                                        <li class="_info">台灣愛服務學習協會</li>
+                                        <li class="_info">Wehub Taipei</li>
+                                        <li class="_info">職學國際社會企業有限公司</li>
+                                        <li class="_info">Caritas (Kingdown of Eswatini)</li>
+                                        <li class="_info">社團法人台灣社會企業創新創業學會</li>
+                                        <li class="_info">烏干達台商會</li>
+                                        <li class="_info">Iris Goble (Kingdown of Eswatini)</li>
+                                        <li class="_info">The bridge family church (Kingdown of Eswatini)</li>
+                                        <li class="_info">房角石社會企業有限公司</li>
+                                        <li class="_info">Linne International Trade Co., PTY Ltd. (Eswatini)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+              <!-- 頁面底圖 -->
+              <div class="bg">
+                <img src="images/BANNER_team.jpg" alt="">
+            </div>
+            <!-- 頁面底圖 END-->
+        </div>
+
+        <!-- Footer -->
+    <footer>
+        <div class="container">
+          <div class="row">
+            <div class="info-box col-md-6 col-lg-3">
+              <div class="footer-logo"><img src="images/logo.png" alt="lovebinti"></div>
+              <p>我們的存在,是為了透過改善衛⽣條件、提升基礎建設、提供職業培訓支持最低度開發國家地區的婦女;並藉由確保女孩及婦女的經期健康與捍衛受教權以提升她們幸福安適。<a href="#">更多 》</a></p>
+              <div class="sns-box">
+                <a href="https://www.facebook.com/lovebinti" target="_blank"><img src="images/fb.png" alt="FACEBOOK"></a>
+                 <a href="https://www.instagram.com/love.binti/"><img src="images/instagram.png" alt="instagram" target="_blank"></a>
+                <a href="https://www.youtube.com/channel/UCOEeTCahe-ftdMLtd2kqtPA/featured"><img src="images/youtube.png" alt="youtube" target="_blank"></a>
+                <a href="https://lin.ee/TFOrcl1" target="_blank"><img src="images/line.png" alt="LINE"></a>
+              </div>
+            </div>
+            <div class="link-box col-md-6 col-lg-3">
+              <h4 class="title sub-title">其他</h4>
+              <a href="contact.html">聯絡我們</a>
+              <a href="blog.html">部落格</a>
+              <a href="privacy.html">隱私權政策</a>
+              <a href="policy.html">會員條款</a>
+              <a href="sitemap.html">網站地圖</a>
+            </div>
+          </div>
+          <p class="copyright">Copyright ©2020 Lovebinti.org All Rights Reserved</p>
+        </div>
+      </footer>
+      <!-- Footer END -->
+    </div>
+    <!-- 內容結束 -->
+
+    <!-- ALL SITE JS -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="dist/boostrap4.2.1/js/popper.min.js"></script>
+    <script src="dist/boostrap4.2.1/js/bootstrap.min.js"></script>
+  <script src="dist/fancybox3/jquery.fancybox.min.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>    <script src="js/common.js"></script>
+
+</body>
+
+</html>

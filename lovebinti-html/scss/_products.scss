@@ -1,0 +1,259 @@
+.products-inner {
+
+    .item-group {
+        // justify-content: space-between;
+        padding: 30px 0;
+
+        .list-box {
+
+            .img-box, .text-box{
+                max-width: 350px;
+                border: 1px solid $lighten-gray;
+                margin: 0 auto;
+            }
+
+            .img-box{
+                border-bottom-color: transparent;
+
+            }
+
+            .text-box {
+                text-align: center;
+                padding: 15px 15px 0;
+                border-top-color: transparent;
+                
+
+                p {
+                    @include text-ellipsis;
+                }
+
+                h6 {
+                    margin-top: 15px;
+                    margin-bottom: 10px;
+
+                }
+
+                .page-btn-wrap {
+                    margin-top: 0;
+                    margin-bottom: 0;
+                    ;
+                }
+
+            }
+
+        }
+    }
+
+    .spinner {
+        max-width: 30%;
+        flex: 0 0 30%;
+
+        >span {
+            max-width: 80px;
+            input{
+                width: 100%;
+                margin-left: 0;
+                margin-right: 0;
+                padding-left: .4rem;
+            }
+        }
+    }
+
+    // 商品詳細
+    .main-item {
+        padding-bottom: 0;
+        border: none;
+
+        .text-box {
+
+            h5 {
+                margin-bottom: 0;
+
+                @include media-breakpoint-up(lg) {
+                    margin-top: 0;
+
+                }
+
+            }
+
+            ._price {
+                font-size: 1.4rem;
+                font-weight: 500;
+                margin-bottom: 0px;
+                color: $black;
+            }
+
+            ._note {
+                margin-bottom: 15px;
+                padding-bottom: 15px;
+                border-bottom: 2px solid $lighten-gray;
+            }
+
+            ._amount {
+                @include Dflex-alignCenter;
+
+                label {
+                    margin-right: 20px;
+                }
+
+            }
+        }
+    }
+
+    .product-info {
+        @include marign-tb-15;
+        @include padding15;
+
+        border: 1px solid $lighten-gray;
+    }
+
+    .relative-box,
+    .title-box {
+        margin-bottom: 0;
+
+    }
+}
+
+.cart-inner{
+    .list-row-table {
+        margin-top: 30px;
+
+        .list-row-title>div,
+        .list-row>div {
+            border: 1px solid $light-gray;
+        }
+
+
+        ._subtotal {
+            text-align: right;
+        }
+
+        ._amount {
+            padding-right: 0;
+            padding-left: 0;
+
+        }
+
+        ._img {
+            max-width: 120px;
+        }
+
+        ._delete {
+            width: 100%;
+            font-size: 1.2rem;
+            text-align: right;
+
+        }
+
+        ._img,
+        ._delete {
+            &::before {
+                display: none;
+            }
+        }
+
+
+        @include media-breakpoint-up(lg) {
+            .list-row:nth-child(2n) {
+                background-color: $light-3-gray;
+            }
+
+            ._name {
+                min-width: 250px;
+            }
+
+            ._amount {
+                width: 100px;
+
+            }
+
+            ._delete {
+                width: 60px;
+                text-align: center;
+                color: $black;
+
+            }
+
+            .spinner {
+                max-width: none;
+                width: 100%;
+                flex: 0;
+                >span{
+                width: 100%;
+                }
+            }
+        }
+
+
+        @include media-breakpoint-down(md) {
+            .list-row {
+                overflow: hidden;
+                background-color: $white !important;
+                border-bottom: 1px solid $light-gray;
+            }
+
+            .list-row>div {
+                border: none;
+                align-items: flex-start;
+
+                &::before {
+                    min-width: 80px;
+                    max-width: 90px
+                }
+            }
+
+            .list-row {
+                ._amount {
+                    @include Dflex-alignCenter;
+                    margin-left: 100px;
+                    margin-bottom: 10px;
+                    ;
+                }
+
+                ._subtotal{
+                    display: block;
+                    &::before {
+                        min-width: auto;
+                        max-width: auto;
+                    }
+    
+                }
+               
+                ._delete {
+                    display: block;
+                }
+            }
+
+
+            ._img {
+                max-width: 80px;
+                float: left;
+                margin-right: 20px;
+            }
+
+            ._name, ._name+div {
+                margin-bottom: 10px;
+                ;
+            }
+
+        }
+
+    }
+
+    .total-box {
+        width: 100%;
+        text-align: right;
+        border: 1px solid $light-gray;
+        border-top-color: transparent;
+        padding: 15px;
+        color: $black;
+        font-weight: 500;
+        font-size: 1.1rem;
+        @include media-breakpoint-down(md) {
+            background: $primary-color;
+            color: $white;
+        border-color: transparent;
+
+        }
+    }
+}

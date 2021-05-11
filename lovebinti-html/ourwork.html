@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- <html lang="zh-Hant-TW"> -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+
+    <!-- IE -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    <title>愛女孩</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
+    <link rel="stylesheet" href="dist/slick/slick.css">
+    <link rel="stylesheet" href="dist/slick/slick-theme.css">
+    <link rel="stylesheet" href="dist/fancybox3/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="dist/jquery-ui-1.12.1/jquery-ui.min.css">
+    <script data-search-pseudo-elements defer src="dist/fontawesome-5.5.0/js/all.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="css/style.min.css?v=20210101">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- NAV START -->
+        <header id="Nav">
+            <div class="navbar container">
+                <!-- 手機版nav漢堡 -->
+                <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </button>
+
+                <!-- 手機版購物車按鈕 -->
+                <div class="mob-display"><button class="mob-cart-btn" type="button" aria-expanded="false"><img
+                            src="images/cart.svg" alt="cart"></button></div>
+
+                <div class="logo-box col-lg-3">
+                    <a href="index.html"><img src="images/logo.png" alt="lovebinti"></a>
+                </div>
+
+                <div class="menubar col-lg-9">
+                    <!-- 手機版nav關閉按鈕 -->
+                    <button class="menu-toggle toggle-close-btn" type="button" aria-hidden="true"><span
+                            class="line"></span>
+                        <span class="line"></span></button>
+                    <!-- 上選單 -->
+                    <nav class="sub-menu">
+                        <div class="nav">
+                            <a class="nav-item nav-link" href="news.html">最新消息<img src="images/news.svg" alt="news"></a>
+
+                            <a class="nav-item nav-link" href="story.html">部落格<img src="images/blog.svg" alt="blog"></a>
+
+                            <a class="nav-item nav-link" href="products.html">購物<img src="images/shop.svg"
+                                    alt="shopping"></a>
+
+                            <div class="btn-group">
+                                <a class="nav-item nav-link" href="members.html" data-mob="會員專區"><img
+                                        src="images/member.svg" alt="member"></a>
+                                <div class="web-display"><a class="nav-item nav-link cart-btn" href="javascript:void(0)"
+                                        data-mob="購物車"><img src="images/cart.svg" alt="cart"></a></div>
+
+
+                                <!-- 先隱藏 -->
+                                <!-- <a class="nav-item nav-link lan-link" href="javascript:void(0)">EN</a> -->
+                            </div>
+                        </div>
+                    </nav>
+                    <!-- 主選單 -->
+                    <nav class="main-menu">
+                        <ul class="nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="fundraising.html">群眾募資</a>
+                            </li>
+                            <!-- 先隱藏 -->
+                            <!-- <li class="nav-item">
+                                      <a class="nav-link" href="donate.html">捐款</a>
+                                  </li> -->
+                            <li class="nav-item dropdown active">
+                                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">我們在做什麼</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="womenfirst.html">婦女第一</a>
+                                    <a class="dropdown-item" href="ourmodel.html">三個支柱</a>
+                                    <a class="dropdown-item active" href="ourwork.html">我們的工作</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">我們的影響力</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="plan_maps.html">執行地圖</a>
+                                    <a class="dropdown-item" href="methodology.html">研究方法與國家</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">關於我們</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="mission.html">使命與願景</a>
+                                    <a class="dropdown-item" href="reports.html">公開揭露事項</a>
+                                    <a class="dropdown-item" href="location.html">辦公室</a>
+                                    <a class="dropdown-item" href="team.html">執行團隊</a>
+                                </div>
+                            </li>
+                            <!-- 先隱藏 -->
+                            <!-- <li class="nav-item mob-dispaly">
+                                      <a class="nav-link lan-link" href="javascript:void(0)">EN</a>
+                                  </li> -->
+                        </ul>
+                    </nav>
+                </div>
+                <button class="close-element" type="button" aria-hidden="false"></button>
+            </div>
+        </header>
+        <!-- NAV END -->
+        <!-- 購物車展開 -->
+        <div class="cart-box">
+            <button class="menu-toggle toggle-close-btn" type="button" aria-hidden="true"><span class="line"></span>
+                <span class="line"></span></button>
+            <p class="box-title">最近加入的商品</p>
+            <!-- 無商品 -->
+            <p class="text-center _warning">您還沒選擇任何商品!</p>
+            <!-- 有商品 -->
+            <div class="row-list">
+                <div class="row-box">
+                    <a href="javascript:void(0)">
+                        <div class="img-box"><img src="images/instagram.png" alt=""></div>
+                        <p class="text-box col-4">愛女孩烏⼲達黑蜜</p>
+                        <p class="_amount">1</p>
+                        <p class="_price">NT$1,200</p>
+                    </a>
+                </div>
+                <div class="row-box">
+                    <a href="javascript:void(0)">
+                        <div class="img-box"><img src="images/instagram.png" alt=""></div>
+                        <p class="text-box col-4">愛女孩烏⼲達黑蜜</p>
+                        <p class="_amount">1</p>
+                        <p class="_price">NT$1,200</p>
+                    </a>
+                </div>
+                <div class="page-btn-wrap">
+                    <a class="main-btn small-btn" href="product_cart.html">前往結帳</a>
+                </div>
+            </div>
+        </div>
+        <!-- 購物車展開 END-->
+        <!-- 內容開始 -->
+        <div class="content">
+            <!-- 麵包屑 START -->
+            <nav aria-label="breadcrumb" class="breadcrumb-wrap">
+                <div class="container">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">首頁</a></li>
+                        <li class="breadcrumb-item"><a href="javascript:void(0)">我們在做什麼</a></li>
+                        <li class="breadcrumb-item active" aria-current="page"><a href="#">我們的工作</a></li>
+                    </ol>
+                </div>
+            </nav>
+            <!-- 麵包屑 END -->
+            <!-- 頁面大圖 -->
+            <div class="page-banner">
+                <div class="img-box">
+                    <div class="container">
+                        <h1>我們在做什麼</h1>
+                    </div>
+                    <picture>
+                        <img src="images/BANNER_ourwork.jpg" alt="">
+                    </picture>
+                </div>
+            </div>
+            <!-- 頁面大圖 END-->
+            <div class="container">
+                <div class="inner ourwork-inner">
+                    <div class="title-box text-left">
+                        <h1 class="title">我們的工作</h1>
+                    </div>
+
+                    <ul class="nav ourwork-nav nav-pills" role="tablist" data-aos="fade-up">
+                        <li class="nav-item">
+                            <a class="icon-link nav-link active" data-toggle="pill" href="#rural" role="tab"
+                                aria-selected="true">農村培⼒(經濟型)</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="icon-link nav-link" data-toggle="pill" href="#wash" role="tab"
+                                aria-selected="false">WASH(援助型)</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="icon-link nav-link" data-toggle="pill" href="#corner" role="tab"
+                                aria-selected="false">房⾓⽯(建設型)</a>
+                        </li>
+                    </ul>
+                    <div class="ourwork-tab tab-content" data-aos="fade-up">
+                        <div class="tab-pane fade show active" id="rural" role="tabpanel">
+                            <div class="ourwork-box" data-aos="fade-up">
+                                <div class="title-box text-center">
+                                    <h1 class="title">農村培⼒</h1>
+                                </div>
+                                <p class="text-center">建立⼀所⽰範社區將關鍵項目績效的定量和/或定性指標，以招募專業志⼯與專業組織協助，以推動下列⼯作。</p>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="img-box">
+                                            <img src="images/ourwork_img01.png" alt="">
+                                        </div>
+                                        <div class="text-box">
+                                            <h4 class="hint">訓練課程</h4>
+                                            <h6>技能與技藝訓練 Teaching of Practical Skills</h6>
+                                            <p>進行裁縫、農業技術與改善生活技能的培訓。土壤、 堆肥，養蜂、養菇，多樣性農業，以社區市場引導 管理目標，以專業知識教育協同契作方式引導生
+                                                產，建立知識與生產力。</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="img-box">
+                                            <img src="images/ourwork_img02.png" alt="">
+                                        </div>
+                                        <div class="text-box">
+                                            <h4 class="hint">合作社</h4>
+                                            <h6>建立平台與資訊橋樑 Information Center</h6>
+                                            <p>對貧困社區內部，按季節推動社區耕作與契作，創 造多樣性種植，以社區內創造需求優先滿足，提供 供需資訊引導種植，避免生產過剩，發揮最大經濟
+                                                效益。協助農⺠生產後農⺠解决儲藏與運輸、管理， 具體幫助農夫生產所面對的挑戰。</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="img-box">
+                                            <img src="images/ourwork_img03.png" alt="">
+                                        </div>
+                                        <div class="text-box">
+                                            <h4 class="hint">微型貸款</h4>
+                                            <h6>投資與投入 Investment and Involved</h6>
+                                            <p>農⺠以專案目標透過小額信貸，或是藉由社區增加 生產設備與材料，提供農作物儲存解决方案，以社 會企業模式建立還款機制、契作，稳定生產。
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="img-box">
+                                            <img src="images/ourwork_img04.png" alt="">
+                                        </div>
+                                        <div class="text-box">
+                                            <h4 class="hint">產銷平台</h4>
+                                            <h6>社區與外部市場推廣 Promotion on Products</h6>
+                                            <p>1. 建立多樣性內需市場平台，建立契作與市場波動 的信息，以便他們可以安排農作物銷售的時間，以 最大限度地提高利潤。<br>
+                                                2. 推動社群支持型農業CSA( Community Supported Agriculture )</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="ourwork-box" data-aos="fade-up">
+                                <div class="title-box text-center">
+                                    <h1 class="title">五個經濟型主計畫</h1>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="img-box">
+                                            <img src="images/ourwork_img05.png" alt="">
+                                        </div>
+                                        <div class="text-box">
+                                            <h4 class="hint">裁縫計畫</h4>
+                                            <p>世界上最貧困的⼈⼝在⾮洲偏鄉農村，⽥間⾟勞種地的幾乎都是女⼈。推動布衛⽣棉與裁縫課程，有效引導動員婦女參與社會與經濟層⾯，貧困問題才有機會改善。布衛⽣棉製作對婦女的技能提升，並引導相關效益和真實改善貧窮議題並呈現加乘效果。
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="img-box">
+                                            <img src="images/ourwork_img06.png" alt="">
+                                        </div>
+                                        <div class="text-box">
+                                            <h4 class="hint">養菇計畫</h4>
+                                            <p>養菇計畫將推動於貧⺠社區，在沒有⾜夠的⼟地，藉著此補充植物性蛋⽩質。極端貧窮，是這⽚⾮洲⼤地最⼤的困境，飢餓與疾病的挑戰無法克服，⽽恐怖主義就會在這樣的環境滋⻑。餵飽每個飢餓的孩⼦，需要與婦女⼀起協作。
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="img-box">
+                                            <img src="images/ourwork_img07.png" alt="">
+                                        </div>
+                                        <div class="text-box">
+                                            <h4 class="hint">養雞（兔）計畫</h4>
+                                            <p>鄉間孩童普遍呈現⽣⻑遲緩的現象，許多營養學研究顯⽰，學龄前六歲孩童補充⾜夠蛋⽩質將幫助腦部發育。鄉間推動有機農業，養雞、免、種植⾹菇，建立家庭式⾁類蛋⽩質補充系統。接續增加有機蔬果、藉動物糞便改善⼟壤，建立多樣⽣態農場，以⾃然放養與混和果樹種植降低氣候變遷影響，推動農場到餐桌並與社區整體⼀起協作，以⾃給⾃⾜及市場機制並⾏，建構永續發展可能的⽅式。協助婦女耕作，烹飪、衛⽣、育兒、就學，等謀⽣技能，幫助鄉間婦女成為撐起家庭的支點。
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="img-box">
+                                            <img src="images/ourwork_img08.png" alt="">
+                                        </div>
+                                        <div class="text-box">
+                                            <h4 class="hint">蜂蜜計畫</h4>
+                                            <p>⾮洲的天然環境是⾼品質的蜂蜜來源保證，偏鄉社群舉辦婦女⼯作坊、藉布衛⽣棉製作與計畫的推動，幫助當地婦女增加收入，協助製作各型態蜂箱，並藉由養蜂賺取額外收入。愛女孩蜂箱計畫透過提供支持蜂箱來幫助⼩型蜂農，婦女在農閒製作蜂箱，藉著蜂蜜的養殖友善作植物受粉，藉蜂蜜提升產量和品質。蜂農必須⽤等價的蜂蜜交換每⼀份蜂箱。採收後的天然蜂蜜會被送到SGS進⾏檢測，並出⼝到其他國家，為農⺠創造收入、維持蜂箱計畫運作。
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="img-box">
+                                            <img src="images/ourwork_img09.png" alt="">
+                                        </div>
+                                        <div class="text-box">
+                                            <h4 class="hint">種籽(堆肥)計畫</h4>
+                                            <p>多樣性蔬菜種植，有機⼟壤、⾼質量種籽，堆肥。以持績性的短期農業課程改善⽣活品質，並以育苗及契作引導⽣產，以學中做的農業培⼒教育，為婦女能夠增加家庭收入，讓窮⼈参與市場並公平的對待，並讓更多的窮⼈能夠餵養孩⼦以及⽣活所需，以農業⽣產幫助落後地區的基本⽣活條件與競爭⼒，以建構地區微型市場經濟為目標。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="wash" role="tabpanel">
+                            <div class="ourwork-box" data-aos="fade-up">
+                                <div class="title-box text-center">
+                                    <h1 class="title">WASH</h1>
+                                </div>
+                                <h4 class="text-center">水源、環境衛生和個人衛生</h4>
+                                <p class="text-center">
+                                    乾淨的飲用水可有效解決公共衛生、對於婦女的生理衛生，孩童在痢疾與傷寒的杜絕，以及面對全球的Covid-19杜絕疫情傳播。潔淨的水資源將為社區發展帶來⻑遠且更有價值的效益，是赤貧偏鄉最急切需要，並優先推動的計畫。
+                                </p>
+                                <div class="row justify-content-center">
+                                    <div class="col-md-6">
+                                        <div class="img-box">
+                                            <img src="images/ourwork_img14.png" alt="">
+                                        </div>
+                                        <div class="text-box">
+                                            <h4 class="hint">布衛生棉工作坊&衛生教育</h4>
+                                            <p>布衛生棉工作坊旨在教導弱勢婦女製作可負擔的生理用品。縫製布衛生棉所需的材料會在課前準備。課程中也會提及像是「如何選擇布料」，「材料取得與價格」以及「布衛生棉清潔和維護」等問題。
+                                                在最後部分，則鼓勵婦女們彼此分享自己的月經經驗，並介紹經期衛生管理(MHM)的重要。工作坊通常需要3小時，舉辦地點可以是在樹下、教會、學校或其他非政府組織。我們期待與更多團體進行合作，以共同推廣可重複使用的布衛生棉。
+                                                <a class="hint" href="padmaking.html">我要參加台灣布衛生棉縫紉計畫 》</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="img-box">
+                                            <img src="images/ourwork_img15.png" alt="">
+                                        </div>
+                                        <div class="text-box">
+                                            <h4 class="hint">掘井、雨水蒐集、淨水</h4>
+                                            <p>針對貧困社區，提供乾淨的用水的目標是通過良好的供水實踐來確保飲用水安全，包括:掘井、匯集 雨水、淨水過濾、煮沸、興建廁所、化糞池有效提升
+                                                環境衛生與防止疾病散撥。人們缺乏與水，衛生設施，和衛生(WASH)，就招致痢疾，傷寒相關發定傳染疾病的威脅。在非洲的低開發地區，約十億人缺乏基本的衛生。乾淨的用水，幫助偏鄉節省醫療支出，有效提升孩童與婦女受教育的權力與健康。
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="img-box">
+                                            <img src="images/ourwork_img16.png" alt="">
+                                        </div>
+                                        <div class="text-box">
+                                            <h4 class="hint">廁所興建</h4>
+                                            <p>婦女在荒野中上廁所的過程被性侵、水源處混雜人畜廢棄物(糞使和尿液)的設施，聯合國的可持續發展目標(SDG)是到2030年人人享有“充分和公平”的衛生條件，廁所的改善，將可以減少疾病，對公共衛生與婦女安全得到加乘的保障，是社區健
+                                                康與婦女安全的重要指標。</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="img-box">
+                                            <img src="images/ourwork_img17.png" alt="">
+                                        </div>
+                                        <div class="text-box">
+                                            <h4 class="hint">肥皂</h4>
+                                            <p>初步估計60%的腹瀉病死亡是由於水，衛生設施和個人衛生不足引起的。但是單獨洗手可以將腹瀉病例減少約30%，這是推動社區教育衛生非常重要的環節。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="corner" role="tabpanel">
+                            <div class="ourwork-box" data-aos="fade-up">
+                                <div class="title-box text-center">
+                                    <h1 class="title">房角石</h1>
+                                </div>
+                                <p class="text-center">
+                                    以水資源、教室以及公共設施改善並連結社群，這些硬體設施將為一個社區的發展奠定基礎。結合教會與學校資源，著眼於公眾利益並建立系統機制，興建廁所、技職訓練中心，協助建構社區與支持多樣性種植農業計畫，引導及協作其他組織推動大型公益計畫，以社區為整體利益成為扶貧援助的目標與願景，成為赤貧社區發展的基石。
+                                </p>
+                                <div class="row justify-content-center">
+                                    <div class="col-md-6">
+                                        <div class="img-box">
+                                            <img src="images/ourwork_img10.png" alt="">
+                                        </div>
+                                        <div class="text-box">
+                                            <h4 class="hint">教室興建</h4>
+                                            <p>提升鄉間教育硬體設施:教室、學校辦公室、教學硬體設備，課桌椅，學校廚房。</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="img-box">
+                                            <img src="images/ourwork_img11.png" alt="">
+                                        </div>
+                                        <div class="text-box">
+                                            <h4 class="hint">技職訓練中心</h4>
+                                            <p>投入食農教育，結合學校資源，將食物與知識，並以加入環境永續議題進入生活與課程。</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="img-box">
+                                            <img src="images/ourwork_img12.png" alt="">
+                                        </div>
+                                        <div class="text-box">
+                                            <h4 class="hint">農產倉儲</h4>
+                                            <p>農夫除了對抗天候，以及農業病蟲害，面對豊收的季節仍需要面對老鼠、蟲害等保存食物的挑戰，因為缺乏良好的儲藏設備，有30%的食物在交易之前被浪費。這都影響著每個農夫的收益。儲藏設備的興建能最直接改善鄉間婦女的收益。
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="img-box">
+                                            <img src="images/ourwork_img13.png" alt="">
+                                        </div>
+                                        <div class="text-box">
+                                            <h4 class="hint">醫療緊急計畫</h4>
+                                            <p>幫助偏鄉社區建立緊急援助機制，救護車，摩托車，以及緊急醫療備用金。</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="info-box col-md-6 col-lg-3">
+                        <div class="footer-logo"><img src="images/logo.png" alt="lovebinti"></div>
+                        <p>我們的存在,是為了透過改善衛⽣條件、提升基礎建設、提供職業培訓支持最低度開發國家地區的婦女;並藉由確保女孩及婦女的經期健康與捍衛受教權以提升她們幸福安適。<a href="#">更多
+                                》</a></p>
+                        <div class="sns-box">
+                            <a href="https://www.facebook.com/lovebinti" target="_blank"><img src="images/fb.png"
+                                    alt="FACEBOOK"></a>
+                            <a href="https://www.instagram.com/love.binti/"><img src="images/instagram.png"
+                                    alt="instagram" target="_blank"></a>
+                            <a href="https://www.youtube.com/channel/UCOEeTCahe-ftdMLtd2kqtPA/featured"><img
+                                    src="images/youtube.png" alt="youtube" target="_blank"></a>
+                            <a href="https://lin.ee/TFOrcl1" target="_blank"><img src="images/line.png" alt="LINE"></a>
+                        </div>
+                    </div>
+                    <div class="link-box col-md-6 col-lg-3">
+                        <h4 class="title sub-title">其他</h4>
+                        <a href="contact.html">聯絡我們</a>
+                        <a href="blog.html">部落格</a>
+                        <a href="privacy.html">隱私權政策</a>
+                        <a href="sitemap.html">網站地圖</a>
+                    </div>
+                </div>
+                <p class="copyright">Copyright ©2020 Lovebinti.org All Rights Reserved</p>
+            </div>
+        </footer>
+        <!-- Footer END -->
+
+    </div>
+    <!-- 內容結束 -->
+
+    <!-- ALL SITE JS -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="dist/boostrap4.2.1/js/popper.min.js"></script>
+    <script src="dist/boostrap4.2.1/js/bootstrap.min.js"></script>
+    <script src="dist/fancybox3/jquery.fancybox.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="js/common.js"></script>
+    <script>
+        $(function () {
+            var hash = window.location.hash;
+            hash && $('ul.nav a[href="' + hash + '"]').tab('show');
+            
+            function removeLocationHash(){
+            var noHashURL = window.location.href.replace(/#.*$/, '');
+            window.history.replaceState('', document.title, noHashURL)
+        }
+            window.addEventListener("load", function () {
+                removeLocationHash();
+            });
+        });
+    </script>
+</body>
+
+</html>

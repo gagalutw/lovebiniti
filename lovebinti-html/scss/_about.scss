@@ -1,0 +1,95 @@
+.about-inner {
+    .report-nav {
+        a span {
+            font-size: 1.1rem;
+        }
+
+    }
+
+    .report-item-group {
+        padding: 50px 0;
+
+        .list-box {
+            margin-bottom: 30px;
+
+            a {
+                span {
+                    display: block;
+                    text-align: right;
+                    color: $main-gray;
+                    @extend %transition-cubic;
+
+                    &::before {
+                        content: attr(data-text);
+                        padding-right: 10px;
+                        opacity: 0;
+                    @extend %transition-cubic;
+
+                    }
+
+                }
+
+                &:hover span::before {
+                    opacity: 1;
+
+                }
+            }
+
+            .img-box img {
+                    max-width: 130px;
+                    margin: 0 auto;
+                }
+        
+
+            .img-box,
+            .text-box {
+                padding: 15px;
+                background: $lighten-gray;
+            }
+            @include media-breakpoint-up(md) {
+                .text-box a {
+                    min-height: 85px;
+                    @include flex-column;
+            }
+            .img-box {
+                border: 1px solid $light-gray;
+            }
+        }
+            @include media-breakpoint-down(sm) {
+                @include Dflex;
+                margin-bottom: 20px;
+                padding: 0;
+              
+                .img-box {
+                    max-width: 20%;
+                    flex: 0 0 20%;
+                    padding: 10px;
+                }
+
+                .text-box {
+                    max-width: 80%;
+                    flex: 0 0 80%;
+                    padding: 10px;
+                    
+                }
+            }
+        }
+    }
+
+    .location-item-group{
+            ._info{
+                font-size: .9rem;
+            }
+    }
+
+    .team-item-group{
+        .title{
+            display: block;}
+            ul {
+                padding-left: 1rem;
+                li{
+                    list-style-type: disc;
+                }
+            }
+    }
+}
